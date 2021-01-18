@@ -1,32 +1,32 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app data-app class="app-wrapper">
+    <router-view></router-view>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import 'material-icons/iconfont/material-icons.scss';
+export default {
+  name: 'App',
+  data: () => ({
+    //
+  }),
+};
+</script>
+<style>
+.app-wrapper {
+  background: #000 !important;
+}
+.o-hidden {
+  overflow: hidden !important;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+@media screen and (max-width: 450px){
+    h1, div.v-card__title.headline {
+      font-size: 20px !important;
     }
-  }
+    input, .v-card__subtitle {
+      font-size: 14px !important;
+    }
 }
 </style>
